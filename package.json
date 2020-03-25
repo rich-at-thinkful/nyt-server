@@ -4,8 +4,7 @@
   "description": "NYT Bestsellers Server, a demonstration project",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app",
-    "debug": "ndb node app"
+    "start": "nodemon app"
   },
   "keywords": [
     "Express",
@@ -16,11 +15,10 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.16.4",
-    "morgan": "^1.9.1"
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "ndb": "^1.0.42",
-    "nodemon": "^1.18.9"
+    "nodemon": "^2.0.2"
   }
 }
