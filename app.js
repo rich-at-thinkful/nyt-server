@@ -10,7 +10,7 @@ app.use(cors());
 const books = require('./books.js');
 
 app.get('/books', (req, res) => {
-  const { search = "", sort } = req.query;
+  const { search = '', sort } = req.query;
 
   if(sort) {
     if(!['title', 'rank'].includes(sort)) {
@@ -21,17 +21,17 @@ app.get('/books', (req, res) => {
   }
 
   let results = books
-        .filter(book => 
-            book
-              .title
-              .toLowerCase()
-              .includes(search.toLowerCase()));
+    .filter(book => 
+      book
+        .title
+        .toLowerCase()
+        .includes(search.toLowerCase()));
 
   if(sort) {
     results
       .sort((a, b) => {
         return a[sort] > b[sort] ? 1 : a[sort] < b[sort] ? -1 : 0;
-    }); 
+      }); 
   }  
 
   res
